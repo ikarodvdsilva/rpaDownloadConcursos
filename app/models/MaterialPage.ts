@@ -21,11 +21,8 @@ class MaterialPage {
       .locator('ul[class=pdf_download]')
       .locator('li')
       .all();
-    console.log(pdfDownload.length);
 
     for (const pdf of pdfDownload) {
-      console.log('Baixando prova');
-      console.log(await pdf.innerText());
       await newPage.waitForLoadState('load');
       const downloadPromise = newPage.waitForEvent('download');
       await pdf.click();

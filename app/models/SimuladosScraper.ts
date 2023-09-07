@@ -30,7 +30,6 @@ class SimuladosScraper {
         await prova.click();
         await page.waitForLoadState('load');
         await materialPage.downloadPDFs();
-        // await materialPage.goBack();
       }
 
       await page.goBack();
